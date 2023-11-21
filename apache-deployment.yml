@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: apache-deployment
   labels:
-    app: apache
+    app: apache # tags
 spec:
-  replicas: 2
+  replicas: 2 # replicas of the pods running at all times
   selector:
     matchLabels:
-      app: apache
-  template:
+      app: apache # manage all pods with this tag
+  template: # template for the pods
     metadata:
       labels:
-        app: apache
+        app: apache # launch pods with this label
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.14.2
+      - name: apache-container # name of the container
+        image: omyro/olga_apache:v2 # image to pull from dockerhub
         ports:
         - containerPort: 80
