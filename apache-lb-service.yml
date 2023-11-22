@@ -7,5 +7,5 @@ spec:
   selector:
     app: apache # selector for managing all pods with this tag
   ports:
-    - port: 80 # open port 80 at lb
+    - port: 80 # open port 80 at lb, creates SG
       targetPort: 80 # Backend POD port
