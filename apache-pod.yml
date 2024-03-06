@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: apache # name of the pod
+spec:
+  containers:
+  - name: apache-container # name of the container
+    image: omyro/olga_apache:v2 # image to pull from dockerhub
+    ports:
+    - containerPort: 80
