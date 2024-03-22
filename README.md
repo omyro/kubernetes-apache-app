@@ -11,7 +11,9 @@ Next, I installed eksctl on macOS:
 
 Check that both have been successfully installed by running the commands `kubectl version --client` and `eksctl version`.
 
-image
+![version1](images/version1.png)
+
+![version2](images/version2.png)
 
 Next, create a basic cluster using eksctl. Paste the following into the terminal:
 
@@ -24,79 +26,51 @@ eksctl create cluster \
 > --nodes-min=2 \
 > --nodes-max=3
 ```
+
+![createcluster](images/createcluster.png)
+
 This will create a cluster with default settings (it will create the cluster in your default region in a default VPC, with one managed nodegroup with 2 m5.large nodes). If you'd like to include additional configurations, please visit the [eksctl official documentation website](https://eksctl.io/usage/creating-and-managing-clusters/).
 
 
+![buildingstack](images/building.png)
+
+![inprogress](images/inprogress.png)
  
+![complete](images/complete.png)
 
-
- 
-
- 
-
-
-
-
- 
+![active](images/clusteractive.png)
 
 It then creates a node group:
 
- 
+![nodegroup](images/nodegroup.png)
 
+![nodeec2](images/nodeec2.png)
  
+![playgroundready](images/ready.png)
 
- 
-
-kubectl get nodes
+`kubectl get nodes`
 You don’t see the control plane, you only manage the nodes with AWS EKS
 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![getnodes](images/getnodes.png)
 
 
 Deployment of the apache application with 2 replicas
 
- 
 
+![deployment](images/deployment.png)
  
+![get](images/getdeploy.png)
 
- 
+![describe](images/describedeploy.png)
 
+![getpods](images/getpods.png)
 
- 
-
- 
+![describepod](images/describepod.png)
 
 Creating LoadBalancer service, exposing application on port 80
 
  
 
- 
-
- 
- 
 
 
 
